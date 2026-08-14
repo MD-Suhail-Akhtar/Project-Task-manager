@@ -12,13 +12,9 @@ connectDB();
 const app = express();
 
 app.use(cors({
-  origin: 'https://project-task-manager-frontend.onrender.com',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: true,
   credentials: true
 }));
-
-app.options('*', cors());
 
 app.use(express.json());
 
