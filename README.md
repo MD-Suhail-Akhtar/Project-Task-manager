@@ -1,5 +1,11 @@
 # Task Management System (MERN Stack)
 
+## 🔗 Live Demo
+   - **Frontend:** https://project-task-manager-frontend.onrender.com
+   - **Backend API:** https://project-task-manager-backend-ap3c.onrender.com
+
+   > Note: Hosted on Render's free tier — the backend may take 20–50 seconds to wake up on first load if it's been idle.
+
 A full-stack task management app with authentication, CRUD operations, task categories, status tracking, and search/filter. Built for the Kinetrexa Software MERN Internship (Task 2).
 
 ## Tech Stack
@@ -104,3 +110,18 @@ Go back to Render, update `CLIENT_URL` to your Vercel URL, and redeploy the back
 **User**: name, email (unique), password (hashed), timestamps
 
 **Task**: user (ref), title, description, category (enum), priority (enum), status (enum), dueDate, timestamps
+
+## 📸 Screenshots
+
+### Login
+![Login Page](./screenshots/login.png)
+
+### Register
+![Register Page](./screenshots/register.png)
+
+### Dashboard
+![Dashboard](./screenshots/dashboard1.png)
+![Dashboard](./screenshots/dashboard2.png)
+![Dashboard](./screenshots/dashboard3.png)
+
+
