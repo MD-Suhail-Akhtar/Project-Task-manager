@@ -1,5 +1,4 @@
 const dns = require('dns');
-
 dns.setServers(['8.8.8.8', '1.1.1.1']);
 
 const express = require('express');
@@ -12,16 +11,16 @@ connectDB();
 
 const app = express();
 
-app.use(
-  cors({
-    origin: [
-      'http://localhost:5173',
-      'https://project-task-manager-frontend.onrender.com'
-    ],
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-  })
-);
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://project-task-manager-frontend.onrender.com'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+app.options('*', cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
