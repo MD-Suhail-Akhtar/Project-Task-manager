@@ -1,0 +1,115 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f4f6f8;
+  color: #1a1a2e;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #1a1a2e;
+  color: #fff;
+}
+
+.navbar .brand { font-weight: 700; font-size: 1.2rem; color: #fff; text-decoration: none; }
+.nav-links { display: flex; gap: 1rem; align-items: center; }
+.nav-links a { color: #fff; text-decoration: none; }
+.nav-user { opacity: 0.8; }
+
+.btn-link {
+  background: none; border: none; color: #4f8cff; cursor: pointer; font-size: 0.95rem;
+}
+.btn-danger { color: #e74c3c; }
+
+.center { text-align: center; padding: 2rem; color: #888; }
+
+.auth-page {
+  display: flex; justify-content: center; align-items: center;
+  min-height: 80vh; padding: 1rem;
+}
+.auth-form {
+  background: #fff; padding: 2rem; border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  width: 100%; max-width: 380px;
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.auth-form h2 { margin-bottom: 0.5rem; }
+.auth-form input {
+  padding: 0.7rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem;
+}
+.error-text { color: #e74c3c; font-size: 0.9rem; }
+
+.btn-primary {
+  background: #4f8cff; color: #fff; border: none; padding: 0.7rem;
+  border-radius: 8px; cursor: pointer; font-size: 1rem; font-weight: 600;
+}
+.btn-primary:hover { background: #3a75e0; }
+.btn-secondary {
+  background: #eee; color: #333; border: none; padding: 0.7rem;
+  border-radius: 8px; cursor: pointer;
+}
+
+.dashboard { max-width: 1000px; margin: 0 auto; padding: 1.5rem; }
+.dashboard h1 { margin-bottom: 1rem; }
+
+.stats-row { display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.stat-card {
+  background: #fff; padding: 1rem 1.5rem; border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: center; flex: 1; min-width: 100px;
+}
+.stat-card span { display: block; font-size: 1.5rem; font-weight: 700; color: #4f8cff; }
+
+.task-form {
+  background: #fff; padding: 1.2rem; border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
+}
+.task-form input, .task-form textarea, .task-form select {
+  padding: 0.6rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.95rem; width: 100%;
+}
+.task-form textarea { resize: vertical; min-height: 60px; }
+.form-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.form-row select, .form-row input { flex: 1; min-width: 120px; }
+.form-actions { display: flex; gap: 0.5rem; }
+
+.filters { display: flex; gap: 0.5rem; margin-bottom: 1.2rem; flex-wrap: wrap; }
+.filters input, .filters select {
+  padding: 0.6rem; border: 1px solid #ddd; border-radius: 8px; font-size: 0.9rem;
+}
+.filters input { flex: 2; min-width: 160px; }
+.filters select { flex: 1; min-width: 120px; }
+
+.task-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;
+}
+.task-card {
+  background: #fff; padding: 1rem; border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex; flex-direction: column; gap: 0.5rem;
+}
+.task-card-header { display: flex; justify-content: space-between; align-items: start; gap: 0.5rem; }
+.task-card-header h3 { font-size: 1.05rem; }
+.task-desc { color: #666; font-size: 0.9rem; }
+.task-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #888; }
+.due-date { font-size: 0.8rem; }
+
+.badge {
+  padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600;
+}
+.badge-category { background: #eef1f8; color: #444; }
+.priority-low { background: #e3f8e9; color: #2a9d5c; }
+.priority-medium { background: #fff4e0; color: #d68b00; }
+.priority-high { background: #fde3e3; color: #d64545; }
+
+.task-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; }
+.status-select { padding: 0.3rem 0.5rem; border-radius: 8px; border: 1px solid #ddd; font-size: 0.85rem; }
+.task-actions { display: flex; gap: 0.6rem; }
+
+@media (max-width: 480px) {
+  .navbar { padding: 0.8rem 1rem; }
+  .dashboard { padding: 1rem; }
+}
